@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Homeowrk 1 - Google</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: 20px;
+      }
+      .container {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      .warning-text {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+      }
+      .danger-text {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+      .grey {
+        background-color: #f2f2f2;
+      }
+      .danger-text img {
+        width: 30px;
+      }
+      .container-2 {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 200px;
+        position: relative;
+      }
+      .div-child {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+      }
+      .generic input {
+        border: 1px solid #dfe1e5;
+        border-radius: 30px;
+        height: 48px;
+        width: 600px;
+        padding-left: 50px;
+        font-size: 20px;
+      }
+      .generic input:focus {
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        border-color: transparent;
+        outline: none;
+      }
+      .div-divide {
+        display: flex;
+        gap: 50px;
+      }
+      div.block {
+        color: #3c4043;
+        background-color: #f8f9fa;
+        border-radius: 5px;
+        margin: 10px;
+        padding: 10px;
+      }
+      img {
+        width: 300px;
+      }
+      .generic {
+        display: flex;
+        align-self: center;
+        padding: 5px;
+        margin: 10px;
+        border-radius: 30px;
+        background-color: white;
+        border: 1px solid #dfe1e5;
+        justify-content: space-between;
+      }
+      .help {
+        position: relative;
+      }
+      .search {
+        background-color: white;
+        height: 35px;
+        width: 350px;
+        border: none;
+        font-size: 16px;
+      }
+      img.icon {
+        width: 20px;
+        margin: 10px;
+      }
+      .wanted {
+        background-color: #f2f2f2;
+        padding: 20px;
+        border-bottom: 1px solid #dadce0;
+      }
+      .bottom {
+        display: flex;
+        background-color: #f2f2f2;
+        justify-content: space-between;
+      }
+
+      .table {
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+      }
+      .chair {
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+      }
+      .search-items {
+        display: none;
+        z-index: 1000;
+        position: absolute;
+        top: 48px;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 2px 10px rgb(0, 0, 0, 0.2);
+        border-radius: 30px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+      .search-item-list {
+        margin-bottom: 30px;
+      }
+
+      .search-item-list div {
+        padding: 15px 20px;
+        font-size: 20px;
+      }
+      .search-item-list div:hover {
+        background-color: #f7f8f9;
+      }
+      .search-item-list img {
+        height: 14px;
+        margin-right: 15px;
+      }
+      .search-item-list span {
+        font-weight: bold;
+      }
+      .search-item-list.searching input {
+        border-color: transparent;
+        box-shadow: none;
+      }
+      .search-item-list.searching .search-items {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="warning-text">
+        <div>About</div>
+        <div>Store</div>
+      </div>
+
+      <div class="danger-text">
+        <div>Gmail</div>
+        <div>Images</div>
+        <div>
+          <img src="https://www.svgrepo.com/show/532198/list-ul-alt.svg" />
+        </div>
+        <div>
+          <img
+            src="https://www.svgrepo.com/show/512717/profile-image-zoom-1347.svg"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="container-2">
+      <div class="div-child">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/800px-Google_2015_logo.svg.png"
+        />
+      </div>
+      <div class="div-child generic">
+        <div>
+          <img
+            class="icon"
+            src="https://www.svgrepo.com/show/532554/search-alt.svg"
+          />
+        </div>
+        <div class="help">
+          <input class="search" />
+        </div>
+        <div class="search-items">
+          <div class="search-item-list">
+            <div>
+              <img
+                src="https://www.svgrepo.com/show/532554/search-alt.svg"
+              />software engineer
+            </div>
+            <div>
+              <img
+                src="https://www.svgrepo.com/show/532554/search-alt.svg"
+              />Software engineer <span>sydney</span>
+            </div>
+            <div>
+              <img
+                src="https://www.svgrepo.com/show/532554/search-alt.svg"
+              />Software engineer <span>salary</span>
+            </div>
+            <div>
+              <img
+                src="https://www.svgrepo.com/show/532554/search-alt.svg"
+              />Software engineer <span>salary sydney</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img
+            class="icon"
+            src="https://www.svgrepo.com/show/533113/microphone-alt.svg"
+          />
+          <img
+            class="icon"
+            src="https://www.svgrepo.com/show/533059/camera.svg"
+          />
+        </div>
+      </div>
+      <div class="div-child div-divide">
+        <div class="block">Google Search</div>
+        <div class="block">I'm Feeling Lucky</div>
+      </div>
+    </div>
+
+    <div class="container-3">
+      <div class="wanted">Australia</div>
+      <div class="bottom">
+        <div class="table">
+          <div>Adversiting</div>
+          <div>Business</div>
+          <div>How Search Works</div>
+        </div>
+        <div class="chair">
+          <div>Privacy</div>
+          <div>Terms</div>
+          <div>Settings</div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const input = document.querySelector('input');
+      const search = document.querySelector('.search-item-list');
+
+      input.addEventListener('focus', function () {
+        search.classList.add('searching');
+      });
+      input.addEventListener('blur', function () {
+        search.classList.remove('searching');
+      });
+    </script>
+  </body>
+</html>

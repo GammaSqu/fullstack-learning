@@ -1,0 +1,146 @@
+body {
+  margin: 0px;
+}
+.container {
+  display: flex;
+
+  gap: 0;
+
+  font-family: 'Poppins', Helvetica, sans-serif;
+  background-color: lightblue;
+}
+
+.left-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  max-width: 400px;
+  height: 900px;
+  background-color: white;
+  position: relative;
+  left: 0;
+  z-index: 1;
+}
+.left-card div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.detail {
+  width: 100%;
+}
+.top-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  font-size: 30px;
+}
+.grey {
+  font-size: 20px;
+  color: gray;
+}
+a {
+  color: #618fff;
+  text-decoration: none;
+}
+.email-input {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  color: #1a1a32;
+}
+.pass-input {
+  display: flex;
+  flex-direction: column;
+}
+input {
+  border: none;
+  border-radius: 5px;
+  background-color: #f4f6f9;
+  padding: 20px;
+  color: #3f4254;
+  font-size: 15px;
+}
+.forgot {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  color: #1a1a32;
+}
+.sign-in {
+  display: flex;
+  justify-content: center;
+}
+.sign-button {
+  font-size: 15px;
+  font-weight: bold;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  color: white;
+  background-color: #1a1a32;
+  border-style: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.google-button {
+  display: flex;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #618fff;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #e5efff;
+  align-items: center;
+  border-style: none;
+  border-radius: 5px;
+}
+button img {
+  width: 20px;
+}
+.right-card {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  flex: auto;
+}
+.right-container {
+  display: flex;
+}
+.right-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  font-weight: bold;
+}
+.title {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.filler {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  color: #4a536a;
+}
+.bg-image {
+  background-image: url('https://preview.keenthemes.com/metronic/theme/html/demo1/dist/assets/media/svg/illustrations/login-visual-2.svg');
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: bottom;
+  width: 80%;
+  height: 100%;
+}

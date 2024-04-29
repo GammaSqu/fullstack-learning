@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Template</title>
+    <style>
+      .parent-div {
+        margin: 30px;
+        background-color: antiquewhite;
+      }
+
+      .a-link {
+        background-color: orange;
+      }
+
+      .nested-div {
+        background-color: cadetblue;
+      }
+
+      button {
+        width: 90vw;
+        height: 20vh;
+      }
+
+      button:hover {
+        color: #ff0000;
+      }
+
+      button:focus-visible {
+        color: rgb(0, 0, 255);
+      }
+
+      li:nth-child(odd) {
+        color: rgb(255, 166, 0);
+      }
+
+      .a-div {
+        background-color: lightseagreen;
+        padding: 20px;
+      }
+
+      .a-div::after {
+        content: 'This is after content. My content does not exist in HTML';
+        background-color: rgb(255, 255, 255, 0.2);
+      }
+      .b-div {
+        margin-top: 20px;
+        padding: 30px;
+        width: 500px;
+        height: 500px;
+        background-color: #000000;
+        color: #fff;
+      }
+
+      .b-div-child {
+        color: #000;
+        background-color: #f8f8f8;
+        width: 50%;
+        height: 50%;
+      }
+      .display-inline {
+        display: inline;
+      }
+
+      .display-inline-block {
+        display: inline-block;
+        width: 300px;
+        padding: 20px;
+      }
+      .display-none {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent-div">
+      I have a
+      <a class="a-link display-block" href="https://google.com">Google link</a>
+      and I am a DIV that has 2 nested DIV.
+      <div class="nested-div display-inline">Nested div 1</div>
+      and
+      <div class="nested-div display-inline-block">Nested div 2</div>
+    </div>
+    <button class="display-none">A button</button>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+    </ul>
+    <div class="a-div">This is DIV content</div>
+    <div class="b-div">
+      This outer text
+      <div class="b-div-child">This is content of nested div</div>
+    </div>
+  </body>
+</html>

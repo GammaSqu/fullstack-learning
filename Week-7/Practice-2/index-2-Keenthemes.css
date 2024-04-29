@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  display: flex;
+}
+.left-card {
+  max-width: 600px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+}
+.title-img {
+  width: 200px;
+}
+.left-container {
+  padding-left: 90px;
+  padding-right: 90px;
+}
+.checklist {
+  margin-top: 100px;
+}
+.block {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  margin-right: 10px;
+  color: #404154;
+  background-color: #f4f6f9;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  font-weight: 500;
+}
+
+.semi-bold {
+  font-weight: 500;
+}
+.special {
+  color: #62c2c9;
+  background-color: #c9f7f5;
+}
+.separate {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.labelling {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.right-card {
+  background-color: #f4f5f9;
+  width: 100%;
+  height: 100%;
+  min-width: 400px;
+  min-height: 839px;
+  flex: 1 auto;
+  padding: 30px;
+  padding-top: 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.create {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+}
+a {
+  text-decoration: none;
+  color: #3699ff;
+  font-weight: bold;
+}
+.top-text .account {
+  font-size: 30px;
+  font-weight: bold;
+}
+.top-text {
+  margin-bottom: 30px;
+}
+.detail div {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.issues {
+  text-align: right;
+}
+.grey {
+  color: #b5b5c3;
+}
+.middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 100px;
+}
+.right-flex {
+  display: flex;
+  flex-direction: column;
+}
+input {
+  font-size: 15px;
+  padding: 20px;
+  border-style: none;
+  border-radius: 10px;
+}
+input:focus {
+  outline: 0;
+}
+.next {
+  text-align: right;
+}
+button {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #3699ff;
+  border-color: #3699ff;
+  box-shadow: none;
+  border-radius: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+button:hover {
+  background-color: #187de4;
+  border-color: #187de4;
+}
+.bg-img {
+  width: 400px;
+}

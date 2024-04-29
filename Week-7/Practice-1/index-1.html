@@ -1,0 +1,199 @@
+<html lang="en">
+  <head>
+    <title>Practice week</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/5.1.2/jasmine.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/5.1.2/jasmine.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/5.1.2/jasmine-html.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/5.1.2/boot0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/5.1.2/boot1.min.js"></script>
+  </head>
+  <body>
+    <script>
+      function add(x, y) {
+        let result = x + y;
+        return result;
+      }
+
+      function minus(x, y) {
+        let total = x - y;
+        return total;
+      }
+
+      function checkExamResult(score) {
+        if (score >= 50) {
+          return `PASS`;
+        } else {
+          return `FAIL`;
+        }
+      }
+      function sumArray(array) {
+        let total = 0;
+        for (let i = 0; i < array.length; i++) {
+          let currentNumber = array[i];
+          total = total + currentNumber;
+        }
+        return total;
+      }
+
+      function arrayAverage(numbers) {
+        let total = sumArray(numbers);
+
+        return total / numbers.length;
+      }
+
+      function addFromOneUntil(number) {
+        let total = 0;
+        //because the cuntion ask us to start from 1
+        //so we will loop through 1 to the provided numbner
+        //each time we loop we will add total with the current number
+
+        //validation input
+        //if (number <=1){return number}
+        if (number <= 1) {
+          return number;
+        }
+        if (typeof number !== `number`) {
+          return `false`;
+        }
+
+        for (let i = 1; i <= number; i++) {
+          total = total + i;
+        }
+        return total;
+      }
+
+      function uniqueItems(items) {
+        let uniqueArray = [];
+        for (let i = 0; i < items.length; i++) {
+          if (uniqueArray.indexOf(items[i]) === -1) {
+            uniqueArray.push(items[i]);
+          }
+        }
+        return uniqueArray;
+      }
+
+      function reverse(items) {
+        let reverseArray = [];
+        for (let i = items.length - 1; i >= 0; i--) {
+          reverseArray.push(items[i]);
+        }
+        return reverseArray;
+      }
+
+      function reverseSentence(sentence) {
+        let reverseLetters = ``;
+        for (let i = sentence.length - 1; i >= 0; i--) {
+          reverseLetters += sentence[i];
+        }
+        return reverseLetters;
+      }
+
+      function countCharacters(character, sentence) {
+        if (character.length !== 1) {
+          return false;
+        }
+
+        let countLetters = 0;
+        for (let i = 0; i < sentence.length; i++) {
+          if (sentence[i] === character) {
+            countLetters++;
+          }
+        }
+        return countLetters;
+      }
+
+      function removeNumber(item, items) {
+        //Look at the first item
+        //if its not the same as the item, return it
+        //if it IS the same, remove it
+
+        //Initialise an empty array `selectArray` to store new elements
+        let selectArray = [];
+        for (let i = 0; i < items.length; i++) {
+          //if current element (items[i]) is NOT equal to the item removing...
+          if (items[i] !== item) {
+            //PUSH that current element into the new array (selectArray)
+            selectArray.push(items[i]);
+          }
+        }
+        return selectArray;
+      }
+
+      function getLargestNumber(numbers) {
+        let biggestNumber = 0;
+        for (let i = 0; i < numbers.length; i++) {
+          let currentNumber = numbers[i];
+          if (i === 0) {
+            biggestNumber = currentNumber;
+          }
+          if (currentNumber > biggestNumber) {
+            biggestNumber = currentNumber;
+          }
+        }
+        return biggestNumber;
+      }
+
+      function getSecondLargestNumber(numbers) {
+        for (let i = 0; i < numbers.length; i++) {
+          //Applying condition
+          if (numbers.length < 2) {
+            return `False - Array must contain at least 2 numbers`;
+          }
+          let largestNumber = getLargestNumber(numbers);
+          let newArray = removeNumber(largestNumber, numbers);
+
+          //Find the largestnumber in the new array --> which will actually find the 2nd
+          let SecondLargestNumber = getLargestNumber(newArray);
+          return SecondLargestNumber;
+        }
+      }
+
+      function getGrade(score) {
+        if (score >= 90) {
+          return `A`;
+        }
+        if (score >= 80 && score < 90) {
+          return `B`;
+        }
+        if (score >= 70 && score < 80) {
+          return `C`;
+        }
+        if (score >= 60 && score < 70) {
+          return `D`;
+        }
+        if (score >= 50 && score < 60) {
+          return `E`;
+        }
+        if (score <= 50) {
+          return `F`;
+        }
+      }
+
+      function getNumbersLargerThanTen(numbers) {
+        let newArray = [];
+        for (let i = 0; i < numbers.length; i++) {
+          let currentNumber = numbers[i];
+          if (currentNumber > 10) {
+            newArray.push(currentNumber);
+          }
+        }
+        return newArray;
+      }
+
+      function uniqueInOrder(items) {
+        let uniqueArray = [];
+        for (let i = 0; i < items.length; i++) {
+          if (uniqueArray.indexOf(items[i]) === -1) {
+            uniqueArray.push(items[i]);
+          }
+        }
+        return uniqueArray;
+      }
+    </script>
+    <script src="./index.spec.js"></script>
+  </body>
+</html>
+;

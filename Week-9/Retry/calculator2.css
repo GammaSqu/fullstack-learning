@@ -1,0 +1,74 @@
+body {
+  margin: 100px;
+  display: flex;
+  justify-content: center;
+}
+.input-wrapper {
+  position: relative;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.calculator-input {
+  flex: 1;
+  border: 2px solid #dbdce0;
+  border-radius: 4px;
+  outline: none;
+  font-size: 30px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  text-align: right;
+}
+
+.input-equation {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 16px;
+  color: #999;
+}
+
+.row {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+.calculator-btn {
+  width: 100px;
+  height: 50px;
+  background-color: #dbdce0;
+  border: none;
+  border-radius: 4px;
+  font-size: 20px;
+  color: #4d4e52;
+}
+
+.calculator-btn:hover {
+  background-color: #666;
+  color: #fff;
+}
+
+.calculator-btn:disabled {
+  opacity: 0.5;
+}
+
+.calculator-result-btn {
+  background-color: #4286f4;
+  color: #fff;
+}
+
+.calculator-result-btn:hover {
+  background-color: #1f5fc7;
+}
+
+.calculator-del-btn {
+  background-color: #f44242;
+  color: #fff;
+}
+
+.calculator-del-btn:hover {
+  background-color: #c11d1d;
+}

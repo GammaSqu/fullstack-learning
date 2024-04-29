@@ -1,0 +1,46 @@
+<html lang="en">
+  <head>
+    <title>Week 3</title>
+
+    <style>
+      p {
+        color: red;
+      }
+      div p {
+        color: grey;
+      }
+      .my-class.my-another-class {
+        color: blue;
+      }
+      .my-class .my-children-class {
+        color: orange;
+      }
+      p button {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <p>A lonely paragraph</p>
+    <div>
+      <div>Random content</div>
+      <p>A paragraph inside DIV</p>
+    </div>
+
+    <div>
+      <div>
+        <p>Another paragraph inside DIV <button>A button in a P</button></p>
+
+        <p class="my-class my-another-class">Contains 2 classnames</p>
+      </div>
+      <button>A button in a DIV</button>
+    </div>
+
+    <div>
+      <div class="my-class">
+        <div>Nested div</div>
+        <p class="my-children-class">Nested p with 1 classname</p>
+      </div>
+    </div>
+  </body>
+</html>

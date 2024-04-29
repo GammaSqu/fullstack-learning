@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Homework 2 - JavaScript Functions</title>
+  </head>
+  <body>
+    <script>
+      //Introduce Myself Function!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+      function myself(name, age) {
+        //Creating summary
+        let summary = `I am ${name}! I am ${age} years old!`;
+        return summary;
+      }
+      //Adding Variables
+      let introduceMyself = myself(`Kevin`, 24);
+
+      console.log(introduceMyself);
+
+      //Get Sentence Lenth Function!!!!!!!!!!!!!!!!!!!!!!!!
+      function words(sentence) {
+        //Creating sentence return which includes the sentence length
+        let statement = `${sentence} has ${sentence.length} characters!`;
+        return statement;
+      }
+      //Adding Variable
+      let paper = words('Hello, World!');
+
+      console.log(paper);
+
+      //Add Function!!!!!!!!!!!!!!!!!!!!!!
+      function add(a, b) {
+        //Creating result return
+        let result = a + b;
+        return result;
+      }
+
+      //Adding Variables
+      let addResult = add(8, 3);
+      console.log(`Sum Result`, addResult);
+
+      //Minus Function!!!!!!!!!!!!!!!!!!
+      function letters(x, y) {
+        //Creating subtract result
+        let subtract = x - y;
+        return subtract;
+      }
+
+      //Adding Variables
+      let minusResult = letters(10, 5);
+      console.log(`Minus Result`, minusResult);
+
+      //Divide Function!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+      function divide(x, y) {
+        //Creating devide result
+        let result = x / y;
+        return result;
+      }
+      //Adding Variables
+      let divideResult = divide(10, 5);
+      console.log(`Divide Result`, divideResult);
+
+      //Multiply Function!!!!!!!!!!!!!!!!!!!!!
+      function multiply(x, y) {
+        //Creating Multiply Result
+        let result = x * y;
+        return result;
+      }
+
+      //Adding Variables
+      let multiplyResult = multiply(10, 20);
+      console.log(`Multiply Result`, multiplyResult);
+
+      //Get Average Function!!!!!!!!!!!!!!!!!!
+      function algebra(x, y) {
+        //Creating Average Result
+        let sum = x + y;
+        //Also Creating a new data function
+        let divide = sum / 2;
+        return divide;
+      }
+      //Adding Variables
+      let average = algebra(5, 10);
+      console.log(`Average Sum`, average);
+
+      // Check Exam Result Function!!!!!!!!!!!!!!!!!!!!!!
+      function checkScore(score) {
+        //Creating PASS/FAIL Result
+        if (score >= 50) {
+          return `PASS`;
+        } else {
+          return `FAIL`;
+        }
+      }
+      //Adding Score Number
+      let result = checkScore(30);
+      console.log(`Exam Result`, result);
+
+      //Check GRADE Function!!!!!!!!!!!!!!!!!!!!!!
+      function checkGrade(number) {
+        //Creating Grade Result
+        if (number >= 90) {
+          return `A`;
+          //For numbers in-between conditions, need to add the "&&" or else won't work
+        } else if (number >= 80 && number < 90) {
+          return 'B';
+        } else if (number >= 70 && number < 80) {
+          return 'C';
+        } else if (number >= 60 && number < 70) {
+          return 'D';
+        } else if (number >= 50 && number < 60) {
+          return 'E';
+        } else if (number < 50) {
+          return 'F';
+        }
+      }
+
+      let test = checkGrade(87);
+      console.log(`Grade Result`, test);
+
+      //Print Numbers Function!!!!!!!!!!!!!!!!!!!!
+      function printNumbers(number) {
+        //'i' starts with 1
+        //Then will end less than (input number) +1
+        // Loop created
+        for (let i = 1; i < number + 1; i++) {
+          //Input log on 'i'
+          console.log(i);
+        }
+      }
+      //Adding Input Variable
+      printNumbers(5);
+
+      //Print Names Function!!!!!!!!!!!!!!!!!!!!!!
+      //Adding Names Array
+      let nameArray = [`Henry`, `Naomi`, `Sarah`];
+      console.log(`Print Names`, nameArray);
+
+      //Favourite Game Function!!!!!!!!!!!!!!!!!!!
+      function printFavouriteGames(games) {
+        //Creating a list count that will include the whole sentence in console.log
+        for (let i = 0; i < games.length; i++) {
+          console.log(`${i + 1}. I love ${favouriteGames[i]}!`);
+        }
+      }
+      //Adding Games Array
+      let favouriteGames = [`Roblox`, `Zelda`, `Alone in the Dark`];
+      printFavouriteGames(favouriteGames);
+
+      //Find Animal Index!!!!!!!!!!!!!!!!!!!!
+      function findAnimalIndex(animals, animalName) {
+        for (let i = 0; i < animals.length; i++) {
+          if (animals[i] === animalName) {
+            return i;
+          }
+        }
+
+        return `NOT FOUND`;
+      }
+
+      let animals = [`Elephant`, `Lion`, `Eagle`];
+      let index = findAnimalIndex(animals, `Eagle`);
+      console.log(animals, `Animal Index`, index);
+
+      //Numbers Larger than Ten Function!!!!!!!!!!!!!!!!!!!!!!!!
+      function getNumbersLargerThanTen(numbers) {
+        for (let i = 0; i < numbers.length; i++) {
+          //Setting Variable for index numbers
+          let currentNumber = numbers[i];
+          //Condition for numbers greater than 10
+          if (currentNumber > 10) {
+            //If number greater than 10, console log it?
+            console.log(currentNumber);
+          }
+        }
+      }
+
+      //Array of Numbers
+      let numbers = [5, 12, 8, 15, 3];
+      console.log(`Numbers greater than 10:`);
+      getNumbersLargerThanTen(numbers);
+
+      //Sum of Array Numbers Function!!!!!!!!!!!!!!!!!!
+      function sumOfArray(arraySum) {
+        let sum = 0;
+        for (let i = 0; i < arraySum.length; i++) {
+          //+= is a operator that adds value of the right of variable assigns the result of it
+          // e.g. (x+=3)  is the same as (x+3 = x[new result])
+          sum += arraySum[i];
+        }
+        return sum;
+      }
+
+      //Array of Numbers to Sum
+      let arraySum = [1, 3, 5];
+      let totalSum = sumOfArray(arraySum);
+      console.log(`Sum of Array:`, arraySum, totalSum);
+
+      // Get Average Arry Function!!!!!!!!!!!!!!
+      function getArrayAverage(array) {
+        let sum = 0;
+        for (let i = 0; i < array.length; i++) {
+          //Applying the += whenever is asking for complex sum
+          sum += array[i];
+        }
+        //Creating Median variable
+        //TRY TO REMEMBER that array.length is differnt number of Indexes (you don't need to +1)
+        let median = array.length;
+        //Applying Average Sum
+        let averageSum = sum / median;
+        return averageSum;
+      }
+      //Creating Variable Array
+      let array = [1, 3, 5];
+      let arrayAverage = getArrayAverage(array);
+      console.log(`The Average of Sum Array is:`, arrayAverage);
+
+      //Timestable Function!!!!!!!!!!!!!!!!
+      function multiplicationTable(times) {
+        for (let i = 0; i < 12; i++) {
+          let indicator = i + 1;
+          let result = times * indicator;
+          console.log(`${times} x ${indicator} = ${result}`);
+        }
+      }
+
+      multiplicationTable(5);
+    </script>
+  </body>
+</html>

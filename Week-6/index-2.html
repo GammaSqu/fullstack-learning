@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Week 6</title>
+  </head>
+  <body>
+    <script>
+      let numbers = [3, 10, 11, 9, 8, 9, 3, 2, 1, 999];
+      console.log(numbers[3]);
+      console.log(numbers.length);
+      console.log(`last item in the array`, numbers[numbers.length - 1]);
+
+      function countFromZeroToTen() {
+        for (let i = 0; i < 11; i++) {
+          console.log(i);
+        }
+      }
+      countFromZeroToTen();
+
+      function getTheLargestNumber(numbers) {
+        let biggestNumber;
+
+        for (let i = 0; i <= numbers.length - 1; i++) {
+          let currentNumber = numbers[i];
+
+          if (i === 0) {
+            biggestNumber = currentNumber;
+          }
+          if (currentNumber > biggestNumber) {
+            biggestNumber = currentNumber;
+          }
+        }
+        return biggestNumber;
+      }
+      // Find the largest number from the provided array and return it
+      function getTheLargestNumber(numbers) {
+        let largestNumber;
+
+        // Loop through the array
+        for (let i = 0; i < numbers.length; i++) {
+          let currentNumber = numbers[i];
+
+          // When it is the very first number in the array
+          // set our largestNumber to that number
+          if (i === 0) {
+            largestNumber = currentNumber;
+          } else {
+            // Check if the current value of largestNumber is smaller than
+            // the current number or not.
+            // If yes, set largestNumber to that number
+            if (largestNumber < currentNumber) {
+              largestNumber = currentNumber;
+            }
+          }
+        }
+
+        return largestNumber;
+      }
+
+      numbers = [99, 1000, 10000000, 10, 1];
+      let largestNumberResult = getTheLargestNumber(numbers);
+
+      console.log('The largest number of', numbers, largestNumberResult);
+    </script>
+  </body>
+</html>

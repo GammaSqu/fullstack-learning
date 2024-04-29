@@ -1,0 +1,51 @@
+body {
+  margin: 100px;
+  display: flex;
+  justify-content: center;
+}
+input {
+  font-size: 30px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  text-align: right;
+  width: 395px;
+}
+.input-setting {
+  border: 2px #dbdce0 solid;
+  height: 65px;
+  border-radius: 5px;
+  position: relative;
+  padding-top: 5px;
+  padding-right: 10px;
+}
+.input-equation {
+  right: 15px;
+  position: absolute;
+  color: grey;
+}
+.calculator-input {
+  border-style: none;
+}
+.calculator-input:focus {
+  outline: none;
+}
+button {
+  font-size: 20px;
+  border-style: none;
+  color: #4d4e52;
+  background-color: #dbdce0;
+  width: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+.red {
+  background-color: red;
+  color: white;
+}
+
+.blue {
+  background-color: #607bf5;
+  color: white;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+
+    <!--CSS link-->
+    <link rel="stylesheet" href="homeworkcalculator.css" />
+  </head>
+  <body>
+    <div>
+      <div class="input-setting">
+        <div class="input-equation"></div>
+        <input readonly class="calculator-input" />
+      </div>
+      <div>
+        <div class="row1">
+          <button class="calculator-btn">(</button>
+          <button class="calculator-btn">)</button>
+          <button class="calculator-btn red">DEL</button>
+          <button class="calculator-btn">AC</button>
+        </div>
+        <div class="row2">
+          <button class="calculator-btn">7</button>
+          <button class="calculator-btn">8</button>
+          <button class="calculator-btn">9</button>
+          <button class="calculator-btn">/</button>
+        </div>
+        <div class="row3">
+          <button class="calculator-btn">4</button>
+          <button class="calculator-btn">5</button>
+          <button class="calculator-btn">6</button>
+          <button class="calculator-btn">*</button>
+        </div>
+        <div class="row4">
+          <button class="calculator-btn number-1">1</button>
+          <button class="calculator-btn">2</button>
+          <button class="calculator-btn">3</button>
+          <button class="calculator-btn">-</button>
+        </div>
+        <div class="row5">
+          <button class="calculator-btn">0</button>
+          <button class="calculator-btn">.</button>
+          <button class="calculator-btn blue">=</button>
+          <button class="calculator-btn">+</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let inputEquation = document.querySelector('.input-equation');
+      let input = document.querySelector('.calculator-input');
+      let buttons = document.querySelectorAll('.calculator-btn');
+      let clearInput = function () {
+        input.value = '';
+      };
+
+      let deleteLastInput = function () {
+        input.value = input.value.slice(0, -1);
+      };
+
+      let calculateResult = function () {
+        let inputValue = input.value;
+        let result = '';
+
+        try {
+          result = eval(inputValue);
+        } catch (e) {
+          result = 'ERROR';
+        }
+        if (result === 'ERROR') {
+          inputEquation.innerHTML = '';
+        } else {
+          inputEquation.innerHTML = inputValue;
+        }
+
+        input.value = result;
+      };
+
+      let onCalculatorButtonClick = function (event) {
+        let action = event.currentTarget.textContent;
+
+        if (action === 'AC') {
+          clearInput();
+        } else if (action === 'DEL') {
+          deleteLastInput();
+        } else if (action === '=') {
+          calculateResult();
+        } else {
+          let inputValue = input.value;
+          let newValue = inputValue + action;
+
+          input.value = newValue;
+        }
+      };
+
+      document.body.addEventListener('keyup', (event) => {
+        if (event.key == 1) {
+          console.log('help');
+        }
+      });
+
+      for (let i = 0; i < buttons.length; i++) {
+        let currentButton = buttons[i];
+
+        currentButton.addEventListener('click', onCalculatorButtonClick);
+      }
+    </script>
+  </body>
+</html>

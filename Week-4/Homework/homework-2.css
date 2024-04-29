@@ -1,0 +1,149 @@
+body {
+  font-family: 'orbitron', Helvetica, sans-serif;
+  font-size: 14px;
+  background-color: #0e0e0e;
+  padding-bottom: 100px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.header .header-margin {
+  width: 30%;
+}
+.location {
+  color: white;
+}
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: red;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+.logo img {
+  width: 60px;
+  border-radius: 4px;
+}
+.header-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.header-menu-item a {
+  display: inline-block;
+  margin-bottom: 5px;
+  color: gray;
+  font-size: 12px;
+  text-decoration: none;
+  padding: 5px 15px;
+  border-radius: 4px;
+  transition: all ease-in 400ms;
+}
+.header-menu-item.active a {
+  color: white;
+  background-color: red;
+}
+.header-menu-item a:hover {
+  color: white;
+  background-color: crimson;
+}
+.section {
+  color: white;
+}
+.section-number {
+  font-size: 35px;
+}
+.section-text {
+  color: gray;
+}
+.stats {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+.section-content {
+  display: flex;
+  gap: 30px;
+  text-align: center;
+}
+.title {
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.info {
+  display: flex;
+  color: white;
+  margin-top: 140px;
+}
+.info-image {
+  text-align: center;
+  flex: 1;
+}
+.info img {
+  max-width: 300px;
+}
+.facts {
+  flex: 1;
+}
+.info-fact {
+  color: white;
+  font-size: 30px;
+  border-bottom: 4px solid red;
+}
+ul li {
+  margin-bottom: 15px;
+}
+.bottom {
+  margin-top: 100px;
+}
+.videos {
+  display: flex;
+  justify-content: space-between;
+}
+.video-items {
+  margin-top: 30px;
+}
+.videos iframe {
+  border: 2px solid black;
+}
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+.moving-border {
+  position: relative;
+}
+.moving-border::before,
+.moving-border::after {
+  content: '';
+  position: absolute;
+  border-radius: 4px;
+  inset: -2px;
+  z-index: -1;
+  background: linear-gradient(var(--angle), #032146, #c3f2ff, #b00);
+  animation: rotate 6s linear infinite;
+}
+.moving-border::after {
+  filter: blur(10px);
+}
+@keyframes rotate {
+  0% {
+    --angle: 0deg;
+  }
+  100% {
+    --angle: 360deg;
+  }
+}

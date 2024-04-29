@@ -1,0 +1,221 @@
+body {
+  margin: 0;
+}
+.container {
+  display: flex;
+  position: sticky;
+}
+.right-jar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.gray {
+  color: gray;
+}
+.header {
+  background-color: white;
+}
+.sections {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.left-head button {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.row-flex {
+  display: flex;
+  gap: 10px;
+}
+.gap {
+  display: flex;
+  gap: 100px;
+}
+.right-head {
+  display: flex;
+  align-items: center;
+}
+.right-corner {
+  display: flex;
+  align-items: center;
+}
+.letter {
+  background-color: #d4f6f5;
+  color: #87c2bc;
+  font-size: 20px;
+  margin-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+}
+.icons img {
+  width: 20px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.bottom-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.profile div {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.small-text {
+  font-size: 13px;
+}
+.action {
+  display: flex;
+}
+.bold {
+  font-weight: bold;
+}
+.action-text {
+  background-color: #d4f6f5;
+  color: #87c2bc;
+  font-size: 15px;
+  margin-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+}
+.action div {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.action img {
+  width: 20px;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  background-color: gray;
+  height: 787px;
+  padding: 10px;
+  gap: 10px;
+}
+.window-left {
+  background-color: white;
+  padding: 10px;
+  width: 300px;
+}
+.edit-dots {
+  text-align: right;
+  font-size: 20px;
+}
+.left-a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.pfp {
+  width: 100px;
+  border-radius: 5px;
+}
+.chat-butt {
+  background-color: #3699ff;
+  color: white;
+  font-size: 15px;
+  margin-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  border-color: #3699ff;
+  box-shadow: none;
+}
+.follow-butt {
+  background-color: #0bb7af;
+  color: white;
+  font-size: 15px;
+  margin-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  border-color: #0bb7af;
+  box-shadow: none;
+}
+.left-b {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.left-b div {
+  margin-top: 5px;
+}
+.left-c {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.left-c-container {
+  display: flex;
+  flex-direction: column;
+}
+.left-c-container div {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.left-c img {
+  width: 20px;
+}
+.end-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.window-right {
+  background-color: white;
+  width: 700px;
+}
+.cancel-butt {
+  background-color: gray;
+  color: black;
+  font-size: 15px;
+  margin-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  border-color: gray;
+  box-shadow: none;
+}
+.personal-info {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px gray solid;
+  padding-bottom: 15px;
+  padding: 15px;
+}
+.bio-edit {
+  padding: 15px;
+}
+.bio-edit div {
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+.bottom {
+  display: flex;
+  justify-content: space-between;
+}

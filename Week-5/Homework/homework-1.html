@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Template</title>
+  </head>
+  <body>
+    <script>
+      function sum(x, y) {
+        let result = x + y;
+        return result;
+      }
+      let sumResult = sum(12, 25);
+      console.log(`sum result`, sumResult);
+
+      function convertFtoC(fahrenheit) {
+        let result = ((fahrenheit - 32) * 5) / 9;
+        return result;
+      }
+      let cTemperature = convertFtoC(120);
+      console.log(`tempurature`, cTemperature);
+
+      function greetMe(name, age) {
+        let result = `I am ${name} and I am ${age} years old!`;
+        return result;
+      }
+      let greetMeResult = greetMe('Jack', 40);
+      console.log('greet me result', greetMeResult);
+    </script>
+  </body>
+</html>

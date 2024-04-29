@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Week 2</title>
+
+    <h1>My Web Adventure</h1>
+
+    <style>
+      h1 {
+        text-align: center;
+        color: lightseagreen;
+      }
+      span {
+        font-weight: bold;
+      }
+      div {
+        margin-bottom: 20px;
+      }
+      .danger-text {
+        color: red;
+      }
+      .warning-text {
+        color: orange;
+      }
+      .bold-text {
+        font-weight: bold;
+      }
+      .italic-text {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="danger-text">
+      <span>Welcome to my web exploration journey!</span> In this digital space,
+      I'll share a bit about myself and some interesting discoveries.
+    </div>
+
+    <div>
+      Paragraph two is dedicated to my favorite hobbies. Whether it's coding,
+      reading, or exploring the great outdoors, each day is a new adventure.
+    </div>
+
+    <div>
+      Next, let's talk about my dream destinations. I've created three anchor
+      links for you to navigate easily:
+      <a href="https://en.wikipedia.org/wiki/Paris">Europe</a>,
+      <a href="https://en.wikipedia.org/wiki/Japan">Japan</a>, and
+      <a href="https://en.wikipedia.org/wiki/Australia">Australia</a>.
+    </div>
+
+    <div>
+      Now, let's dive into my travel bucket list. Here's an unordered list of
+      five places I dream of visiting:
+    </div>
+
+    <ul>
+      <li class="danger-text bold-text">Paris, France</li>
+      <li>Machu Picchu, Peru</li>
+      <li>Santorini, Greece</li>
+      <li>Great Barrier Reef, Australia</li>
+      <li class="danger-text italic-text">Tokyo, Japan</li>
+    </ul>
+
+    <div class="warning-text">
+      Finally, let's add a visual touch to my web journey. Check out these two
+      images that capture the essence of my adventurous spirit!
+    </div>
+
+    <img
+      src="https://media.cntraveler.com/photos/63e6b44a71cc5230e7788d4f/1:1/w_3571,h_3571,c_limit/Paris_GettyImages-601762971.jpg"
+    />
+    <img
+      src="https://media.cntraveler.com/photos/60341fbad7bd3b27823c9db2/4:3/w_4624,h_3468,c_limit/Tokyo-2021-GettyImages-1208124099.jpg"
+    />
+
+    <script>
+      document
+        .querySelector('.danger-text')
+        .addEventListener('click', function () {
+          alert('Danger text is clicked!');
+        });
+
+      document
+        .querySelector('.warning-text')
+        .addEventListener('click', function () {
+          alert('Warning text is clicked!');
+        });
+    </script>
+  </body>
+</html>
