@@ -22,6 +22,14 @@ let onEditButtonCllick = function () {
   let itemInput = listItemParent.querySelector(`[data-component="input"]`);
 
   itemInput.readonly = false;
+
+  currentEditButton.classList.add('d-none');
+  confirmButton.classList.remove('d-none');
+};
+
+let onConfirmButtonCLick = function (event) {
+  let currentEditButton = event.target;
+  let listItemParent = currentEitButton.cloest(`[data-component="list-item"]`);
 };
 let onAddButtonClick = function () {
   let newTodoContent = input.value;
