@@ -123,7 +123,7 @@ function selectAnswer(e) {
     if (button.dataset.correct === 'true') {
       button.classList.add('btn-success');
     }
-
+    button.classList.remove('btn-outline-secondary');
     button.disabled = true;
   });
 
