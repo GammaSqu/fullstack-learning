@@ -53,12 +53,12 @@ let quizData = [
 //nextButton = nextButton
 
 // Selecting the question, question number, answer buttons, and next button
-let questionElement = document.querySelector(`[data-component="question"]`);
+let questionElement = document.querySelector('[data-component="question"]');
 let questionNumber = document.querySelector(
-  `[data-component="questionNumber"]`
+  '[data-component="questionNumber"]'
 );
-let answerButtons = document.querySelector(`[data-component="answers"]`);
-let nextButton = document.querySelector(`[data-component="next"]`);
+let answerButtons = document.querySelector('[data-component="answers"]');
+let nextButton = document.querySelector('[data-component="next"]');
 
 // Setting some index for this medthod?
 let currentQuestionIndex = 0;
@@ -79,16 +79,14 @@ function showQuestion() {
   let currentQuestion = quizData[currentQuestionIndex];
   let questionNumber = currentQuestionIndex + 1;
 
-  questionElement.innerHTML =
-    'Question ' + questionNumber + '. ' + currentQuestion.question;
+  questionElement.innerHTML = `Question ${questionNumber}. ${currentQuestion.question}`;
 
   //Adding the answers as buttons
   currentQuestion.answers.forEach((answer) => {
     let button = document.createElement('button');
     button.innerHTML = answer.text;
-    button.classList.add('btn');
-    button.classList.add('btn-outline-secondary');
-    button.classList.add('d-block');
+    button.classList.add('btn', 'btn-outline-secondary', 'd-block');
+
     answerButtons.appendChild(button);
     //Adding click event when click an answer (also don't understand what "dataset" is)
     if (answer.correct) {
@@ -100,7 +98,7 @@ function showQuestion() {
 
 //Adding a reset function - when moving to new question it moves previous asnwers
 function resetState() {
-  nextButton.style.display = 'none';
+  nextButton.classList.add('d-none');
   while (answerButtons.firstChild) {
     answerButtons.removeChild(answerButtons.firstChild);
   }
@@ -123,11 +121,11 @@ function selectAnswer(e) {
     if (button.dataset.correct === 'true') {
       button.classList.add('btn-success');
     }
-
+    button.classList.remove('btn-outline-secondary');
     button.disabled = true;
   });
 
-  nextButton.style.display = 'block';
+  nextButton.classList.remove('d-none');
 }
 
 //Function for scoring? - When finished it will show score and button to start again
