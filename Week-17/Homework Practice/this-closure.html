@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Week 17 - This context</title>
+  </head>
+  <body>
+    <button data-component="btn-1">Button 1</button>
+    <button data-component="btn-2">Button 2</button>
+
+    <script>
+      //CLOSURE
+      //Gives access to an outer function's scope from an inner function
+      //BUT NOT THE OTHER WAY AROUND
+
+      //THIS
+      //A keyword that is hard to grasph, but very important
+      //Lets us reuse functions in different EXECUTION CONTEXTS (in functions?)
+      //a function onced built can be used for different objects using the keyword
+
+      //.BIND
+      //Creates a new function and set the context of THIS to another object
+
+      let anObject = {
+        message: '1. Message from an object',
+        alertMessage: function () {
+          alert(this.message);
+          //you can test this by debugging, and type on the console:
+          //anObject.alertMessage()
+        },
+      };
+
+      let btn1 = document.querySelector('[data-component="btn-1"]');
+      //btn1.addEventListener('click', anObject.alertMessage);
+      //with this by itself, when testing this by clicking Btn1
+      //The alert message comes out as undefined
+      //the THIS in the case, is the BTN!!! - not the alertMessage
+      //the button has nothing; in this context no message
+      //You can check this from debug
+      //btn1.addEventListener('click', function (){console.log(this)});
+      //Which means we use .BIND
+      //It will be instead:
+      btn1.addEventListener('click', anObject.alertMessage.bind(anObject));
+      //with this, a click of the button will make the message appear
+
+      let anotherObject = {
+        message: '2. MESSAGE FROM ANOTHER OBJECT',
+      };
+
+      let bt2 = document.querySelector('[data-component="btn-2"]');
+      bt2.addEventListener('click', anObject.alertMessage.bind(anotherObject));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Week 17 - classes</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      //CLASSES
+      //templates for creating objects
+      //they ENCLOSE in data with code to work on that data?
+      //What consists in CLAsses are:
+
+      //Constructor
+      //called when we create a new class instance
+      //This
+      //using the keyword to access the class property or function
+      //#[Name] - hastag name
+      //to create private property or private function
+      //new ClassName(...)
+      //to create a new instance
+
+      //For this exercise, we're building a simple app Counter that will be inside <div id="app">
+      //we will be using classes to build it
+
+      class Counter {
+        #container;
+        //the general form of the result?
+        #decreaseButton;
+        //will affect the decrease button
+        #increaseButton;
+        //will affect the increase button
+        #input;
+        //the result number when using the buttons
+
+        constructor(container) {
+          this.#container = container;
+          this.#render();
+          //place the function into the constructor (main container)
+        }
+
+        //Noe we add in a render function
+        //This structure is slightly different to how I normally attempt to code it
+
+        #render() {
+          this.#container.innerHTML = `
+      <button data-component="decrease">-</button>
+      <input type="number" value="0" />
+      <button data-component="increase">+</button>`;
+
+          //now we code for the rest:
+          //INPUT
+          this.#input = this.#container.querySelector('input');
+          //for this context, this is the same as using document.querySelector
+
+          //DECREASE BUTTON
+          this.#decreaseButton = this.#container.querySelector(
+            '[data-component="decrease"]'
+          );
+
+          //now we will add a click event to the decrease button
+          this.#decreaseButton.addEventListener(
+            'click',
+            this.#decrease.bind(this)
+          );
+
+          //INCREASE BUTTON
+          this.#increaseButton = this.#container.querySelector(
+            '[data-component="increase"]'
+          );
+          this.#increaseButton.addEventListener(
+            'click',
+            this.#increase.bind(this)
+          );
+        }
+        //we've made the function, so taht means nothing has happened so far
+        //becuase now it's time to apply the function within the code (ABOVE)
+
+        //we've also added the functions of #decrease and #increase
+        //so now we will define them
+        #decrease() {
+          //we will let the value = to input value as we also convert it to a number
+          let value = Number(this.#input.value);
+          //because it's decrease button, the new value will be -1 of current value
+          let newValue = value - 1;
+
+          this.#input.value = newValue;
+        }
+        //increase would be similar to decrease
+        #increase() {
+          let value = Number(this.#input.value);
+          let newValue = value + 1;
+
+          this.#input.value = newValue;
+        }
+
+        //Now if we attempt to use the buttons now
+        //you will find it will not work
+        //The reason is because of 'this.#decreaseButton.addEventListener('click', this.#decrease)'
+        //Similar to the this.html, the THIS in this context is the button but not the decrease/increase function
+        //the button has nothing to extract
+        //so in this case, we will need to use .bind
+        //i.e 'this.#decreaseButton.addEventListener('click', this.#decrease.bind(this))' - adding .bind(this)
+
+        //Not sure what this is
+        //Adding a Public Print Value - NOTE THAT IT DOESNT HAVE #
+        //Making this public NOT PRIVATE
+        printValue() {
+          let value = Number(this.#input.value);
+
+          console.log(value);
+        }
+
+        //With this
+        //if you were to type counterApp.printValue() into the console
+        //You can see the result of value in console
+        //However, if you use #increase/decrease functions ('counterApp.#increase()')
+        //The result won't be shown in console, but still applies in website input
+
+        //I'm guessing this is just to show us that public function has the risk of being hacked
+        //If someone knows how to operate the function in code with debug
+        //Then they have the power to change and affect the site
+      }
+
+      let counterApp = new Counter(document.querySelector('#app'));
+    </script>
+  </body>
+</html>
